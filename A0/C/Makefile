@@ -8,11 +8,11 @@ TARGET = main
 all: $(TARGET)
 
 # source code to object file
-main.o: main.c
+main.o: main.c figure.h
 	$(CC) $(CFLAGS) -c main.c
 
 # source code to object file
-figure.o: figure.c
+figure.o: figure.c figure.h
 	$(CC) $(CFLAGS) -c figure.c
 
 # object files to executable file
