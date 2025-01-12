@@ -42,7 +42,12 @@ public class Line extends Figure {
         y = y + yOffset;
     }
     
+    /**
+     * Prints a text representation of the figure
+     * Line - Line@(x, y) with angle a° and length l
+     */
     public void print() {
-        return;
+        /* Line@(x, y) with angle a° and length l */
+        System.out.printf("Line@(%d, %d) with angle %d° and length %d%n", x, y, angle, length);
     }
 }

@@ -40,7 +40,12 @@ public class Circle extends Figure {
         y = y + yOffset;
     }
     
+    /**
+     * Prints a text representation of the figure
+     * Circle - Circle@(x, y) with radius r
+     */
     public void print() {
-        return;
+        /* Circle@(x, y) with radius r */
+        System.out.printf("Circle@(%d, %d) with radius %d%n", x, y, radius);
     }
 }

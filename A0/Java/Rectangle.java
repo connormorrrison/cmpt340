@@ -45,7 +45,12 @@ public class Rectangle extends Figure {
         y2 = y2 + yOffset;
     }
     
+    /**
+     * Prints a text representation of the figure
+     * Rectangle - Rectangle@(x1, y1)*(x2, y2)
+     */
     public void print() {
-        return;
+        /* Rectangle@(x1, y1)*(x2, y2) */
+        System.out.printf("Rectangle@(%d, %d)*(%d, %d)%n", x1, y1, x2, y2);
     }
 }
