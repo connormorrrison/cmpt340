@@ -2,7 +2,6 @@ package A0.Java;
 
 public class Main {
     public static void main(String[] args) {
-        
         // Sample figures
         Figure[] figuresArray = {
             new Circle(Figure.ORIGIN_X, Figure.ORIGIN_Y, 1),
