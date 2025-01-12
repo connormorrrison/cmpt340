@@ -12,8 +12,24 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    /**
+     * Scales a factor by a given factor
+     * Circle - scales the radius
+     */
     public void scale(int factor) {
-        return;
+        /* Rescaling by 0 shrinks the figure down to essentially a point */
+        if (factor == 0) {
+            radius = 0;
+            return;
+        }
+
+        /* Rescaling by 1 leaves the figure unchanged */
+        if (factor == 1) {
+            return;
+        }
+
+        /* Rescaling by 2 makes the dimensions of the figure be doubled */
+        radius = radius * factor;
     }
     
     public void xlate(int xOffset, int yOffset) {
