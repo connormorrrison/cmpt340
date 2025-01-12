@@ -32,8 +32,12 @@ public class Circle extends Figure {
         radius = radius * factor;
     }
     
+    /**
+     * Takes a pair of integers, and moves the Figure by the offse amounts given by the integers
+     */
     public void xlate(int xOffset, int yOffset) {
-        return;
+        x = x + xOffset;
+        y = y + yOffset;
     }
     
     public void print() {

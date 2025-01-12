@@ -35,8 +35,14 @@ public class Rectangle extends Figure {
         y2 = y1 + (y2 - y1) * factor;
     }
     
+    /**
+     * Takes a pair of integers, and moves the Figure by the offse amounts given by the integers
+     */
     public void xlate(int xOffset, int yOffset) {
-        return;
+        x1 = x1 + xOffset;
+        x2 = x2 + xOffset;
+        y1 = y1 + yOffset;
+        y2 = y2 + yOffset;
     }
     
     public void print() {
