@@ -5,6 +5,13 @@ public class Circle extends Figure {
     public int x, y;
     public int radius;
     
+    // Class constructor
+    public Circle(int x, int y, int radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
     public void scale(int factor) {
         return;
     }

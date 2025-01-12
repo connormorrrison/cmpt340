@@ -6,6 +6,14 @@ public class Line extends Figure {
     public int angle;
     public int length;
 
+    // Class constructor
+    public Line(int x, int y, int angle, int length) {
+        this.x = x;
+        this.y = y;
+        this.angle = angle;
+        this.length = length;
+    }
+
     public void scale(int factor) {
         return;
     }
