@@ -23,6 +23,7 @@ void scale(Figure *figure, int factor) {
                 figure->shape.line.length = 0;
                 break;
         }
+        return;
     }
     
     /* Rescaling by 1 leaves the figure unchanged */
@@ -31,19 +32,17 @@ void scale(Figure *figure, int factor) {
     }
     
     /* Rescaling by 2 makes the dimensions of the figure be doubled */
-    if (factor > 1) {
-        switch (figure->type) {
-            case CIRCLE:
-                figure->shape.circle.radius = figure->shape.circle.radius * factor;
-                break;
-            case RECTANGLE:
-                figure->shape.rectangle.x2 = figure->shape.rectangle.x1 + (figure->shape.rectangle.x2 - figure->shape.rectangle.x1) * factor;
-                figure->shape.rectangle.y2 = figure->shape.rectangle.y1 + (figure->shape.rectangle.y2 - figure->shape.rectangle.y1) * factor;
-                break;
-            case LINE:
-                figure->shape.line.length = figure->shape.line.length * factor;
-                break;
-        }
+    switch (figure->type) {
+        case CIRCLE:
+            figure->shape.circle.radius = figure->shape.circle.radius * factor;
+            break;
+        case RECTANGLE:
+            figure->shape.rectangle.x2 = figure->shape.rectangle.x1 + (figure->shape.rectangle.x2 - figure->shape.rectangle.x1) * factor;
+            figure->shape.rectangle.y2 = figure->shape.rectangle.y1 + (figure->shape.rectangle.y2 - figure->shape.rectangle.y1) * factor;
+            break;
+        case LINE:
+            figure->shape.line.length = figure->shape.line.length * factor;
+            break;
     }
 }
 
