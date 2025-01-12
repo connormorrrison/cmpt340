@@ -18,6 +18,7 @@ void scale(Figure *figure, int factor) {
                 /* Collapses points to the lower left (x, y) coordinates */
                 figure->shape.rectangle.x2 = figure->shape.rectangle.x1;
                 figure->shape.rectangle.y2 = figure->shape.rectangle.y1;
+                break;
             case LINE:
                 figure->shape.line.length = 0;
                 break;
@@ -48,4 +49,36 @@ void scale(Figure *figure, int factor) {
 
 void xlate(Figure *figure, int xOffset, int yOffset);
 
-void print(Figure *figure);
+/**
+ * Prints a text representation of the figure
+ * Circle@(x, y) with radius r
+ * Rectangle@(x1, y1)*(x2, y2)
+ * Line@(x, y) with angle a° and length l
+ */
+void print(Figure *figure) {
+    switch (figure->type) {
+        case CIRCLE:
+            /* Circle@(x, y) with radius r */
+            printf("Circle@(%d, %d) with radius %d\n",
+            figure->shape.circle.x,
+            figure->shape.circle.y,
+            figure->shape.circle.radius);
+            break;
+        case RECTANGLE:
+            /* Rectangle@(x1, y1)*(x2, y2) */
+            printf("Rectangle@(%d, %d)*(%d, %d)\n",
+            figure->shape.rectangle.x1,
+            figure->shape.rectangle.y1,
+            figure->shape.rectangle.x2,
+            figure->shape.rectangle.y2);
+            break;
+        case LINE:
+            /* Line@(x, y) with angle a° and length l */
+            printf("Line@(%d, %d) with angle %d° and length %d\n",
+            figure->shape.line.x,
+            figure->shape.line.y,
+            figure->shape.line.angle,
+            figure->shape.line.length);
+            break;
+    }
+}
