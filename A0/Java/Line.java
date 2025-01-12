@@ -14,8 +14,24 @@ public class Line extends Figure {
         this.length = length;
     }
 
+    /**
+     * Scales a factor by a given factor
+     * Lines - scales the length
+     */
     public void scale(int factor) {
-        return;
+        /* Rescaling by 0 shrinks the figure down to essentially a point */
+        if (factor == 0) {
+            length = 0;
+            return;
+        }
+
+        /* Rescaling by 1 leaves the figure unchanged */
+        if (factor == 1) {
+            return;
+        }
+
+        /* Rescaling by 2 makes the dimensions of the figure be doubled */
+        length = length * factor;
     }
     
     public void xlate(int xOffset, int yOffset) {
