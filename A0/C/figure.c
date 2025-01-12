@@ -5,7 +5,7 @@
  * Scales a factor by a given factor
  * Circle - scales the radius
  * Rectangle - scales from the lower left corner
- * Lines -  scales the length
+ * Lines - scales the length
  */
 void scale(Figure *figure, int factor) {
     /* Rescaling by 0 shrinks the figure down to essentially a point */
@@ -70,9 +70,9 @@ void xlate(Figure *figure, int xOffset, int yOffset) {
 
 /**
  * Prints a text representation of the figure
- * Circle@(x, y) with radius r
- * Rectangle@(x1, y1)*(x2, y2)
- * Line@(x, y) with angle a° and length l
+ * Circle - Circle@(x, y) with radius r
+ * Rectangle - Rectangle@(x1, y1)*(x2, y2)
+ * Line - Line@(x, y) with angle a° and length l
  */
 void print(Figure *figure) {
     switch (figure->type) {

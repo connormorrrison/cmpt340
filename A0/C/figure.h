@@ -1,7 +1,6 @@
 #ifndef FIGURE_H
 #define FIGURE_H
 
-/* Immutable origins */
 #define ORIGIN_X 0
 #define ORIGIN_Y 0
 
@@ -24,7 +23,6 @@ typedef struct {
     int length;
 } Line;
 
-/* Figure types */
 typedef enum {
     CIRCLE,
     RECTANGLE,
