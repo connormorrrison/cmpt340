@@ -52,13 +52,18 @@ void scale(Figure *figure, int factor) {
 void xlate(Figure *figure, int xOffset, int yOffset) {
     switch (figure->type) {
         case CIRCLE:
-            return;
+            figure->shape.circle.x = figure->shape.circle.x + xOffset;
+            figure->shape.circle.y = figure->shape.circle.y + yOffset;
             break;
         case RECTANGLE:
-            return;
+            figure->shape.rectangle.x1 = figure->shape.rectangle.x1 + xOffset;
+            figure->shape.rectangle.x2 = figure->shape.rectangle.x2 + xOffset;
+            figure->shape.rectangle.y1 = figure->shape.rectangle.y1 + yOffset;
+            figure->shape.rectangle.y2 = figure->shape.rectangle.y2 + yOffset;
             break;
         case LINE:
-            return;
+            figure->shape.line.x = figure->shape.line.x + xOffset;
+            figure->shape.line.y = figure->shape.line.y + yOffset;
             break;
     }
 }
