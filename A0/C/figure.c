@@ -12,14 +12,14 @@ void scale(Figure *figure, int factor) {
     if (factor == 0) {
         switch (figure->type) {
             case CIRCLE:
-                figure->circle.radius = 0;
+                figure->shape.circle.radius = 0;
                 break;
             case RECTANGLE:
                 /* Collapses points to the lower left (x, y) coordinates */
-                figure->rectangle.x2 = figure->rectangle.x1;
-                figure->rectangle.y2 = figure->rectangle.y1;
+                figure->shape.rectangle.x2 = figure->shape.rectangle.x1;
+                figure->shape.rectangle.y2 = figure->shape.rectangle.y1;
             case LINE:
-                figure->line.length = 0;
+                figure->shape.line.length = 0;
                 break;
         }
     }
@@ -33,14 +33,14 @@ void scale(Figure *figure, int factor) {
     if (factor > 1) {
         switch (figure->type) {
             case CIRCLE:
-                figure->circle.radius = figure->circle.radius * factor;
+                figure->shape.circle.radius = figure->shape.circle.radius * factor;
                 break;
             case RECTANGLE:
-                figure->rectangle.x2 = figure->rectangle.x1 + (figure->rectangle.x2 - figure->rectangle.x1) * factor;
-                figure->rectangle.y2 = figure->rectangle.y1 + (figure->rectangle.y2 - figure->rectangle.y1) * factor;
+                figure->shape.rectangle.x2 = figure->shape.rectangle.x1 + (figure->shape.rectangle.x2 - figure->shape.rectangle.x1) * factor;
+                figure->shape.rectangle.y2 = figure->shape.rectangle.y1 + (figure->shape.rectangle.y2 - figure->shape.rectangle.y1) * factor;
                 break;
             case LINE:
-                figure->line.length = figure->line.length * factor;
+                figure->shape.line.length = figure->shape.line.length * factor;
                 break;
         }
     }

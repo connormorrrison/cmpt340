@@ -6,6 +6,7 @@ TARGET = main
 .PHONY: all clean
 
 all: $(TARGET)
+	rm -f $(OBJS)
 
 # source code to object file
 main.o: main.c figure.h

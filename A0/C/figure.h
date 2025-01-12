@@ -38,7 +38,7 @@ typedef struct {
         Circle circle;
         Rectangle rectangle;
         Line line;
-    };
+    } shape;
 } Figure;
 
 /* Function declarations */
