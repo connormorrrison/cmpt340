@@ -2,10 +2,10 @@
 #include "figure.h"
 
 /**
- * Scales a factor by a given factor.
- * Circle - scales the radius.
- * Rectangle - scales from the lower left corner.
- * Lines -  scales the length.
+ * Scales a factor by a given factor
+ * Circle - scales the radius
+ * Rectangle - scales from the lower left corner
+ * Lines -  scales the length
  */
 void scale(Figure *figure, int factor) {
     /* Rescaling by 0 shrinks the figure down to essentially a point */
@@ -46,7 +46,22 @@ void scale(Figure *figure, int factor) {
     }
 }
 
-void xlate(Figure *figure, int xOffset, int yOffset);
+/**
+ * Takes a pair of integers, and moves the Figure by the offse amounts given by the integers
+ */
+void xlate(Figure *figure, int xOffset, int yOffset) {
+    switch (figure->type) {
+        case CIRCLE:
+            return;
+            break;
+        case RECTANGLE:
+            return;
+            break;
+        case LINE:
+            return;
+            break;
+    }
+}
 
 /**
  * Prints a text representation of the figure
