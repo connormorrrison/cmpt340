@@ -24,9 +24,26 @@ typedef struct {
     int length;
 } Line;
 
+/* Figure types */
+typedef enum {
+    CIRCLE,
+    RECTANGLE,
+    LINE
+} FigureType;
+
+/* A generic figure */
+typedef struct {
+    FigureType type;
+    union {
+        Circle circle;
+        Rectangle rectangle;
+        Line line;
+    };
+} Figure;
+
 /* Function declarations */
-void scale(, int factor);
-void xlate(, int xOffset, int yOffset);
-void print();
+void scale(Figure *figure, int factor);
+void xlate(Figure *figure, int xOffset, int yOffset);
+void print(Figure *figure);
 
 #endif
