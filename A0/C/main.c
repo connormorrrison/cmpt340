@@ -11,5 +11,25 @@ int main(void) {
     /* Figures pre-transformation */
     printf("Figures pre-transformation:\n");
 
+    /* Applying transformations */
+    printf("Applying scale:\n");
+    printf("Scale by 0:\n");
+    scale(&circle1, 0);
+    scale(&rectangle1, 0);
+    scale(&line1, 0);
+
+    printf("Scale by 1:\n");
+    scale(&circle1, 1);
+    scale(&rectangle1, 1);
+    scale(&line1, 1);
+
+    printf("Scale by 2:\n");
+    scale(&circle1, 2);
+    scale(&rectangle1, 2);
+    scale(&line1, 2);
+
+    /* Figures post-transformation */
+    printf("Figures post-transformation:\n");
+
     return 0;
 }

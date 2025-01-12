@@ -8,14 +8,16 @@
  * Lines -  scales the length.
  */
 void scale(Figure *figure, int factor) {
-    /* Rescaling by 0 shrinks the figure down to essentially a point*/
+    /* Rescaling by 0 shrinks the figure down to essentially a point */
     if (factor == 0) {
         switch (figure->type) {
             case CIRCLE:
                 figure->circle.radius = 0;
                 break;
             case RECTANGLE:
-                break;
+                /* Collapses points to the lower left (x, y) coordinates */
+                figure->rectangle.x2 = figure->rectangle.x1;
+                figure->rectangle.y2 = figure->rectangle.y1;
             case LINE:
                 figure->line.length = 0;
                 break;
@@ -28,8 +30,19 @@ void scale(Figure *figure, int factor) {
     }
     
     /* Rescaling by 2 makes the dimensions of the figure be doubled */
-    if (factor == 2) {
-        return;
+    if (factor > 1) {
+        switch (figure->type) {
+            case CIRCLE:
+                figure->circle.radius = figure->circle.radius * factor;
+                break;
+            case RECTANGLE:
+                figure->rectangle.x2 = figure->rectangle.x1 + (figure->rectangle.x2 - figure->rectangle.x1) * factor;
+                figure->rectangle.y2 = figure->rectangle.y1 + (figure->rectangle.y2 - figure->rectangle.y1) * factor;
+                break;
+            case LINE:
+                figure->line.length = figure->line.length * factor;
+                break;
+        }
     }
 }
 
