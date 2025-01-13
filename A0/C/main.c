@@ -2,15 +2,31 @@
 #include "figure.h"
 
 int main(void) {
-    /* Sample figures */
-    Figure figuresArray[] = {
-        {CIRCLE, .shape.circle = {ORIGIN_X, ORIGIN_Y, 1}},
-        {RECTANGLE, .shape.rectangle = {-3, 2, -1, 3}},
-        {LINE, .shape.line = {1, -2, 45, 1}}
-    };
-
-    int numFigures = sizeof(figuresArray) / sizeof(figuresArray[0]);
+    int numFigures = 3;
     int i;
+
+    /* Sample figures */
+    Figure figuresArray[3];
+
+    /* Initialize Circle */
+    figuresArray[0].type = CIRCLE;
+    figuresArray[0].shape.circle.x = ORIGIN_X;
+    figuresArray[0].shape.circle.y = ORIGIN_Y;
+    figuresArray[0].shape.circle.radius = 1;
+
+    /* Initialize Rectangle */
+    figuresArray[1].type = RECTANGLE;
+    figuresArray[1].shape.rectangle.x1 = -3;
+    figuresArray[1].shape.rectangle.y1 = 2;
+    figuresArray[1].shape.rectangle.x2 = -1;
+    figuresArray[1].shape.rectangle.y2 = 3;
+
+    /* Initialize Line */
+    figuresArray[2].type = LINE;
+    figuresArray[2].shape.line.x = 1;
+    figuresArray[2].shape.line.y = -2;
+    figuresArray[2].shape.line.angle = 45;
+    figuresArray[2].shape.line.length = 1;
 
     /* Initial figures */
     printf("Figures before transformations:\n");
