@@ -8,7 +8,7 @@ OUT_DIR="./bin"
 mkdir -p $OUT_DIR
 
 # Compile all .java files in the current directory
-javac -d $OUT_DIR $SRC_DIR/*.java
+javac --release 21 -d $OUT_DIR $SRC_DIR/*.java
 
 # Run Main.java class
 java -cp $OUT_DIR A0.Java.Main
