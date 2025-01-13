@@ -48,6 +48,6 @@ public class Line extends Figure {
      */
     public void print() {
         /* Line@(x, y) with angle a° and length l */
-        System.out.printf("Line@(%d, %d) with angle %d° and length %d%n", x, y, angle, length);
+        System.out.printf("Line@(%d,%d) with angle %d° and length %d%n", x, y, angle, length);
     }
 }

@@ -78,14 +78,14 @@ void print(Figure *figure) {
     switch (figure->type) {
         case CIRCLE:
             /* Circle@(x, y) with radius r */
-            printf("Circle@(%d, %d) with radius %d\n",
+            printf("Circle@(%d,%d) with radius %d\n",
             figure->shape.circle.x,
             figure->shape.circle.y,
             figure->shape.circle.radius);
             break;
         case RECTANGLE:
             /* Rectangle@(x1, y1)*(x2, y2) */
-            printf("Rectangle@(%d, %d)*(%d, %d)\n",
+            printf("Rectangle@(%d,%d)*(%d,%d)\n",
             figure->shape.rectangle.x1,
             figure->shape.rectangle.y1,
             figure->shape.rectangle.x2,
@@ -93,7 +93,7 @@ void print(Figure *figure) {
             break;
         case LINE:
             /* Line@(x, y) with angle a° and length l */
-            printf("Line@(%d, %d) with angle %d° and length %d\n",
+            printf("Line@(%d,%d) with angle %d° and length %d\n",
             figure->shape.line.x,
             figure->shape.line.y,
             figure->shape.line.angle,

@@ -51,6 +51,6 @@ public class Rectangle extends Figure {
      */
     public void print() {
         /* Rectangle@(x1, y1)*(x2, y2) */
-        System.out.printf("Rectangle@(%d, %d)*(%d, %d)%n", x1, y1, x2, y2);
+        System.out.printf("Rectangle@(%d,%d)*(%d,%d)%n", x1, y1, x2, y2);
     }
 }

@@ -46,6 +46,6 @@ public class Circle extends Figure {
      */
     public void print() {
         /* Circle@(x, y) with radius r */
-        System.out.printf("Circle@(%d, %d) with radius %d%n", x, y, radius);
+        System.out.printf("Circle@(%d,%d) with radius %d%n", x, y, radius);
     }
 }
