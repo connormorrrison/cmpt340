@@ -1,3 +1,15 @@
+commit 9e4999cec9dc7556b35ca30a6066659b15de4042
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 19:52:32 2025 -0600
+
+    Use hardcoded figure configuration to meet C90
+
+commit 0248d61d09eefe77926c4beb60cb1894264e5a1c
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 19:10:06 2025 -0600
+
+    Add gitlog.txt to project
+
 commit dd5ee192ca435c55e51cf067b513f1ecaca7a601
 Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
 Date:   Sun Jan 12 18:35:18 2025 -0600
