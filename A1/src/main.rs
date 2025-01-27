@@ -18,10 +18,10 @@ impl Figure {
         // Rescaling by 0 shrinks the figure down to essentially a point
         if factor == 0 {
             match self {
-                Figure::Circle(_, _, radius) {
+                Figure::Circle(_, _, radius) => {
                     *radius = 0;  // Shrinks to a point
                 }
-                Figure::Rectangle(x1, y1, x2, y2) {
+                Figure::Rectangle(x1, y1, x2, y2) => {
                     *x2 = *x1;  // Collapses points to the lower left (x, y) coordinates
                     *y2 = *y1;
                 }
@@ -51,7 +51,25 @@ impl Figure {
         }
     }
 
-    fn xlate() {}
+    // Takes a pair of integers, and moves the Figure by the offset amounts given by the integers
+    fn xlate(&mut self, xOffset: i32, yOffset: i32) {
+        match self {
+            Figure::Circle(x, y, _) => {
+                *x += *xOffset;
+                *y += *yOffset;
+            }
+            Figure::Rectangle(x1, y1, x2, y2) => {
+                *x1 += xOffset;
+                *y1 += yOffset;
+                *x2 += xOffset;
+                *y2 += yOffset;
+            }
+            Figure::Line(x, y, _, _) => {
+                *x += xOffset;
+                *y += yOffset;
+            }
+        }
+    }
 
     fn print() {}
 }
