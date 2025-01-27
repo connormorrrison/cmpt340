@@ -11,9 +11,6 @@ enum Figure {
 
 impl Figure {
     // Scales a figure by a given factor
-    // Circle: scales the radius
-    // Rectangle: scales from the lower left corner
-    // Lines: scales the length
     fn scale(&mut self, factor: i32) {
         // Rescaling by 0 shrinks the figure down to essentially a point
         if factor == 0 {
@@ -87,7 +84,7 @@ impl Figure {
 }
 
 fn main() {
-    // Declare an array of Figures (fixed-size)
+    // Declare an array of figures
     let mut figures: [Figure; 3] = [
         Figure::Circle(ORIGIN_X, ORIGIN_Y, 1),
         Figure::Rectangle(-3, 2, -1, 3),
@@ -96,10 +93,10 @@ fn main() {
 
     println!("Figures before transformations:");
     for figure in figures.iter() {
-        figure.print();  // Fixed print function to use &self instead of &mut self
+        figure.print();
     }
 
-    // Apply transformations: translate by (2,3) and scale by 2
+    // Apply transformations
     println!("\nFigures after transformations:");
     for figure in figures.iter_mut() {
         figure.xlate(2, 3);
