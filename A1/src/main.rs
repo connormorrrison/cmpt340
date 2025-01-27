@@ -71,7 +71,19 @@ impl Figure {
         }
     }
 
-    fn print() {}
+    fn print(&mut self) {
+        match self {
+            Figure::Circle(x, y, radius) => {
+                println!("Circle@({}, {}) with radius {}", x, y, radius);
+            }
+            Figure::Rectangle(x1, y1, x2, y2) => {
+                println!("Rectangle@({}, {})*({}, {})", x1, y1, x2, y2);
+            }
+            Figure::Line(x, y, angle, length) => {
+                println!("Line@({}, {}) with angle {}° and length {}", x, y, angle, length);
+            }
+        }
+    }
 }
 
 fn main() {
