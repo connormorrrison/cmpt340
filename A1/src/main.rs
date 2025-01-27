@@ -42,7 +42,7 @@ impl Figure {
                 *radius *= factor;
             }
             Figure::Rectangle(x1, y1, x2, y2) => {
-                *x1 = *x1 + (*x2 - *x1) * factor;
+                *x2 = *x1 + (*x2 - *x1) * factor;
                 *y2 = *y1 + (*y2 - *y1) * factor;
             }
             Figure::Line(_, _, _, length) => {
@@ -52,26 +52,26 @@ impl Figure {
     }
 
     // Takes a pair of integers, and moves the Figure by the offset amounts given by the integers
-    fn xlate(&mut self, xOffset: i32, yOffset: i32) {
+    fn xlate(&mut self, x_offset: i32, y_offset: i32) {
         match self {
             Figure::Circle(x, y, _) => {
-                *x += *xOffset;
-                *y += *yOffset;
+                *x += x_offset;
+                *y += y_offset;
             }
             Figure::Rectangle(x1, y1, x2, y2) => {
-                *x1 += xOffset;
-                *y1 += yOffset;
-                *x2 += xOffset;
-                *y2 += yOffset;
+                *x1 += x_offset;
+                *y1 += y_offset;
+                *x2 += x_offset;
+                *y2 += y_offset;
             }
             Figure::Line(x, y, _, _) => {
-                *x += xOffset;
-                *y += yOffset;
+                *x += x_offset;
+                *y += y_offset;
             }
         }
     }
 
-    fn print(&mut self) {
+    fn print(&self) {
         match self {
             Figure::Circle(x, y, radius) => {
                 println!("Circle@({}, {}) with radius {}", x, y, radius);
@@ -87,6 +87,23 @@ impl Figure {
 }
 
 fn main() {
-    // Sample
-    println!("Hello, world!");
+    // Declare an array of Figures (fixed-size)
+    let mut figures: [Figure; 3] = [
+        Figure::Circle(ORIGIN_X, ORIGIN_Y, 1),
+        Figure::Rectangle(-3, 2, -1, 3),
+        Figure::Line(1, -2, 45, 1),
+    ];
+
+    println!("Figures before transformations:");
+    for figure in figures.iter() {
+        figure.print();  // Fixed print function to use &self instead of &mut self
+    }
+
+    // Apply transformations: translate by (2,3) and scale by 2
+    println!("\nFigures after transformations:");
+    for figure in figures.iter_mut() {
+        figure.xlate(2, 3);
+        figure.scale(2);
+        figure.print();
+    }
 }
