@@ -1,3 +1,21 @@
+commit 78a0a714440b75396d86ad2fb88002f404b1aa05
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Mon Jan 27 22:05:00 2025 -0600
+
+    Separated written into two different files; Explanation.pdf now in Errors subdirectory
+
+commit 3e8b7c2f0bb1fb552d49c8f583285bd69f67b6ba
+Author: Connor Morrison (tvi340) <tvi340@usask.ca>
+Date:   Mon Jan 27 21:13:03 2025 -0600
+
+    Delete .DS_Store
+
+commit 049ba360f64c52426f0d0f52f303edb277789d37
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Mon Jan 27 21:10:11 2025 -0600
+
+    Add gitlog.txt and a1.pdf file to git
+
 commit 97cd103b7d158b31f38e5d13d6075d76a4cd1767
 Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
 Date:   Mon Jan 27 21:05:07 2025 -0600
