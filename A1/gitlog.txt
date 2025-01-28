@@ -1,0 +1,224 @@
+commit 97cd103b7d158b31f38e5d13d6075d76a4cd1767
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Mon Jan 27 21:05:07 2025 -0600
+
+    Finalized project implementation
+    
+    - Reorganized into Errors / Rust directory structure.
+    - Added a-e examples for Errors directory
+    - Written explanation added in seperate file
+
+commit 90ae59e24d64779d2ec9d4595c4ce6b98694ac32
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Mon Jan 27 04:53:13 2025 -0600
+
+    Updated project structure to assignment specifications; created BUILD.sh
+
+commit c001624ba9671a399e74b62d56ffc7ddc85e986c
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Mon Jan 27 00:48:42 2025 -0600
+
+    Updated main.rs formatting
+
+commit fa959663a24bc4c2e5f1a957263b57c4a617e495
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Mon Jan 27 00:36:11 2025 -0600
+
+    Added sample figures to main; updated variable naming to snake case
+
+commit d9829443c09c0ce4304a3a8dd8c725018ef2fd00
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Mon Jan 27 00:00:01 2025 -0600
+
+    Add initial print function
+
+commit d53634c01f504511f5711cab529eb63b81e2634a
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 26 23:53:30 2025 -0600
+
+    Add initial xlate function
+
+commit a93accc0e13cc6091776cf641f131340821c96dc
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 26 17:42:55 2025 -0600
+
+    Add initial scale() function
+
+commit d525a5afa7d2525b5f25edc0ff5cf786a91b29ae
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sat Jan 25 21:36:18 2025 -0600
+
+    Add inital A1 project, with main.rs skeleton file
+
+commit 1a5668759afd23e4aab1b69f716cb07d407b6b35
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 19:54:23 2025 -0600
+
+    Updated gitlog.txt
+
+commit 9e4999cec9dc7556b35ca30a6066659b15de4042
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 19:52:32 2025 -0600
+
+    Use hardcoded figure configuration to meet C90
+
+commit 0248d61d09eefe77926c4beb60cb1894264e5a1c
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 19:10:06 2025 -0600
+
+    Add gitlog.txt to project
+
+commit dd5ee192ca435c55e51cf067b513f1ecaca7a601
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 18:35:18 2025 -0600
+
+    Updated BUILD.sh to compile using Java v21
+
+commit cbee07b9196c667c287a260bdd104e14942197dc
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 18:29:06 2025 -0600
+
+    Add BUILD.sh file to Java subdirectory with compiling and file cleanup; tweaked printing format in C and Java files for Circle, Rectangle, and Line
+
+commit 8cbe0e5abe025c53ab09e0d4d3baf4c2f3f594b6
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 15:26:47 2025 -0600
+
+    Adjusted comment
+
+commit d1d4e7624cf1e919c3e334067156c3663a8778f5
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 15:25:17 2025 -0600
+
+    Added main() implementation for sample figures
+
+commit 79194a28915c533c457d3d0b29bcd64659d5f906
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 15:11:24 2025 -0600
+
+    Add print() for Circle, Rectangle, and Line
+
+commit 5cb112714a8dc7063ba1e8f4d5dad2b8ae9e2fb5
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 14:57:37 2025 -0600
+
+    Add xlate() implementation for Circle, Rectangle, and Line
+
+commit dc0afe5faf56c6fc70ba1a0b75a33b08a798d29b
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 14:22:36 2025 -0600
+
+    Add scale implementation for Line
+
+commit 7ea4c6113ca6bd482fd014ebed8e67efc9ac4125
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 14:16:16 2025 -0600
+
+    Implemented initial scale() for Circle and Rectangle
+
+commit 7381269275bbd2baa1d2260460a1b4d00ddfe205
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 07:07:49 2025 -0600
+
+    Initial class constructor for Circle, Rectangle, and Line classes
+
+commit fcefb6ca3f9aa6f5df0e7dc7632d1fe8911b5581
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 06:59:31 2025 -0600
+
+    Remove abstract from each figure class; add function prototypes
+
+commit 243924d17bd5eb92f28ef6821c1d0b9bcf6483c9
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 06:55:22 2025 -0600
+
+    Add public attributes to all Figure classes
+
+commit a777e384bc405391e87c22f4d245b16f9165083b
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 06:46:59 2025 -0600
+
+    Add function declarations into Figure.java; design will use inheritance
+
+commit ffd6165c22a7f76290bb55ef898fee676732d13f
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 06:38:07 2025 -0600
+
+    Added initial Java classes with basic structure, pending implementation
+
+commit 3c9becb1729972e9b5a6f39ea19a4cd549571872
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 06:17:19 2025 -0600
+
+    Tweaked comments throughout all files; updated main.c to remove commented-out prior tests, focusing on necessary tests to demonstrate code functionality
+
+commit 07c7bae6332ebba46c80922188f113c968e06c6b
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 05:08:38 2025 -0600
+
+    Add initial logic for xlate in figure.c
+
+commit dc37cd74a401041888a64e971993b921e655510e
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 04:53:28 2025 -0600
+
+    Switch statement implemented, pending main logic for xlate() in figure.c
+
+commit b1db681222c9356c8376aae3334175a67a41bd31
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 04:22:22 2025 -0600
+
+    Updated main.c to store sample figures in array; test cases for scale 0, 1, 2 use array-based format
+
+commit 7210b5ae83322580c0828e8e8c32689663b9d664
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 01:04:58 2025 -0600
+
+    Adjusted main.c example formatting; implemented initial print functionin figure.c to print textual representation of each shape
+
+commit c187a361876d2af0021d322205ee14619c98eb52
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 00:13:55 2025 -0600
+
+    Remove object files after linking; updated union in figure.h
+
+commit 6b1ed99a47381c6afc7249f3bc49116d7cc257f9
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sun Jan 12 00:03:40 2025 -0600
+
+    Add conditional when factor > 1 in scale(); add scale transformations in main.c
+
+commit 28b9503643d5eb0702088ad688d407c1eef3925b
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Sat Jan 11 23:01:09 2025 -0600
+
+    Updated figure.c and main.c
+    
+    - Add initial logic for scale() in figure.c when factor equals 0 and 1 respectively
+    - Add example circle, rectangle and line examples in main.c
+
+commit 04b4d6f8b126945b04be1b52da02d52a39d9f0a7
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Fri Jan 10 04:24:02 2025 -0600
+
+    Add figure.h with definitions for Circle, Rectangle, and Line structures
+    
+    - Define immutable origin constants
+    - Add structures for Circle, Rectangle, and Line
+    - Declare incomplete function prototypes
+
+commit f5e7e86fb656842552e635893df7ddaa940e276b
+Author: Connor Morrison <113166048+connormorrrison@users.noreply.github.com>
+Date:   Fri Jan 10 02:37:08 2025 -0600
+
+    Initial project structure setup and Makefile setup
+    
+    - Set up initial project structure with C and Java subdirectories
+    - Initial Makefile implementation
+    - Basic  main.c, figure.c and figure.h files
+
+commit f78048504646c139aa5649c51d5cc3b635d978a7
+Author: Chris Dutchyn (cjd032) <cdutchyn@usask.ca>
+Date:   Tue Jan 7 12:55:42 2025 -0600
+
+    Initial Commit
