@@ -4,4 +4,4 @@
 cargo build
 
 # Run project
-cargo run
+cargo run -- "$@"
