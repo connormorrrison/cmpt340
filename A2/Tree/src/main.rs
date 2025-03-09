@@ -1,34 +1,61 @@
-// binary tree with lifetime 'a
-// we've learned about extent and no longer need 'Box'es
-enum Tree<'a> {
-    Leaf (/* no data */),
-    Node (&'a Tree<'a>, &'a Tree<'a>)
+// Represents a binary tree, either a leaf or a node with two children
+#[derive(Clone)]
+enum Tree {
+    Leaf,
+    Node(Box<Tree>, Box<Tree>),
 }
 
 use Tree::*;
 
-// but we don’t know Rust OO and ‘trait’s
-// so implementing ‘Display’ is still beyond us
-// therefore so we’ll do it manually
+// Converts a binary tree to a string
 fn serialize_tree(t: &Tree) -> String {
     match t {
-        Leaf() => "".to_string(),
+        Leaf => "".to_string(),
         Node(l, r) => [
             "(".to_string(),
             serialize_tree(l),
             ".".to_string(),
             serialize_tree(r),
-            ")".to_string()
-            ].join("")
+            ")".to_string(),
+        ].join("")
     }
 }
 
-// read an integer from command-line
-// then your program should print the distinct trees
-// containing the given number of nodes
-// this scaffold simply shows use of the supplied code
+// Generates distinct binary trees with n internal nodes
+fn generate_trees(n: i32) -> Vec<Box<Tree>> {
+    // Base case: a tree with 0 internal nodes is just a leaf
+    if n == 0 {
+        return vec![Box::new(Leaf)];
+    }
+
+    // Holds all generated trees for n
+    let mut result = vec![];
+
+    for i in (0..n).rev() {
+        let left_trees = generate_trees(i);
+        let right_trees = generate_trees(n - 1 - i);  // Number of internal nodes allocated to right subtree
+        for left in &left_trees {
+            for right in &right_trees {
+                result.push(Box::new(Node(left.clone(), right.clone())));  // New tree node with cloned subtrees, add to result
+            }
+        }
+    }
+    result
+}
+
+// Serializes distinct binary trees with n internal nodes
+fn generate_tree_serializations(n: i32) -> Vec<String> {
+    let trees = generate_trees(n);  // Generates all unique trees before preceding to serialization
+    let mut serializations = vec![];
+    for tree in trees {
+        serializations.push(serialize_tree(&tree));
+    }
+    serializations
+}
+
 use std::env;
 
+// Reads an integer from command line and prints tree serializations
 fn main() {
     let cmdline: Vec<String> = env::args().collect();
 
@@ -42,20 +69,10 @@ fn main() {
                 Ok(n) => {
                     print!("{}\n", n);
 
-                    print!("{}\n",
-                        serialize_tree(
-                            &Node(&Node(&Node(&Leaf(), &Leaf()), &Leaf()),
-                                  &Leaf())
-                        )
-                    );
-
-                    print!("{}\n",
-                        serialize_tree(
-                            &Node(&Node(&Leaf(), &Leaf()),
-                                  &Node(&Leaf(), &Leaf())
-                            )
-                        )
-                    );
+                    let trees = generate_tree_serializations(n);
+                    for tree in trees {
+                        println!("{}", tree);
+                    }
                 },
                 Err(e) => {
                     println!("not_a_number:_{}", e);
