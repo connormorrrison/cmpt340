@@ -1,5 +1,4 @@
-// An imperative version (as described in the book) using
-// a loop and mutable variables
+// An imperative version (as described in the book) using a loop and mutable variables
 fn binary_search_imperative(vector: &Vec<i32>, target: i32) -> i32 {
     let mut low = 0;
     let mut high = (vector.len() as i32) - 1;
@@ -37,8 +36,7 @@ fn binary_search_imperative(vector: &Vec<i32>, target: i32) -> i32 {
 - Termination: When low > high, the subarray is empty, meaning the target is not in the vector, and the function returns -1.
 */
 
-// A functional version using recursion and cannot involve
-// mutable variables
+// A functional version using recursion and cannot involve mutable variables
 fn binary_search_functional(vector: &Vec<i32>, target: i32, low: i32, high: i32) -> i32 {
     if high >= low {
         let mid = low + (high - low) / 2;
@@ -49,13 +47,13 @@ fn binary_search_functional(vector: &Vec<i32>, target: i32, low: i32, high: i32)
         }
 
         // If target is greater
-        if vector[mid as usize] > target {
-            return binary_search_functional(vector, target, low, mid - 1);
+        if vector[mid as usize] < target {
+            return binary_search_functional(vector, target, mid + 1, high);
         }
 
         // If target is less
         else {
-            return binary_search_functional(vector, target, mid + 1, high);
+            return binary_search_functional(vector, target, low, mid - 1);
         }
     }
     -1
@@ -73,6 +71,7 @@ fn binary_search_functional(vector: &Vec<i32>, target: i32, low: i32, high: i32)
 - Conclusion: By mathematical induction, the recursive binary search function is correct.
 */
 
+// Main function for testing
 fn main() {
     let sorted_vector = vec![1, 2, 13, 20, 30, 31, 42, 44, 77, 98];
 
