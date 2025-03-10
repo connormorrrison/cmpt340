@@ -32,8 +32,8 @@ fn binary_search_imperative(vector: &Vec<i32>, target: i32) -> i32 {
     - If vector[mid] equals the target, the function returns mid.
     - If the target is greater than vector[mid], then low is updated to mid + 1.
     - If the target is less, high is updated to mid - 1.
-    - In both updates, if the target was present, it remains in the new subarray defined by the updated low and high values.
-- Termination: When low > high, the subarray is empty, meaning the target is not in the vector, and the function returns -1.
+    - In both updates, if the target was present, it remains in the new sub-array defined by the updated low and high values.
+- Termination: When low > high, the sub-array is empty, meaning the target is not in the vector, and the function returns -1.
 */
 
 // A functional version using recursion and cannot involve mutable variables
@@ -116,5 +116,5 @@ fn main() {
 (5 points) Which program was easier to write, and why? Which proof was easier to write, and why? In keeping with the theory concept informing this course, your answer may relate to the unwritten culture of programming.
 - The imperative version is generally easier to write since loops and mutable variables are more intuitive.
 - Its correctness proof via loop invariants is straightforward as you directly update the search boundaries.
-- The functional (recursive) version, involves recursion and induction, making its proof slightly more abstract.
+- The functional (recursive) version, involves recursion and induction, making its proof more abstract.
 */
